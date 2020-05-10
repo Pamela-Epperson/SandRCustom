@@ -1,0 +1,9 @@
+* {
+    font-family: sans-serif;
+    margin: 0px auto;
+    padding: 10px;
+}
+#wrapper{
+    width: 800px;
+    height: 650px;
+}

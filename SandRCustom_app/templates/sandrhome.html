@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SandRCustom</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Welcome to SandRCustom!</h1>
+        <div id="top">
+            <a href="/sign_in">Sign In</a><a id=cart href="/view_cart">View Cart</a><a id=share href="/share_button">Share</a>
+        </div>   
+        <div id="form_box"> 
+            {% if messages %}
+                <div id='errors'>
+                {% for message in messages %}
+                    <p>- {{message}} -</p>
+                {% endfor %}
+                </div>
+            {% endif %}
+            <!-- <div id="custom_canopy">
+                <form action="/make_canopy" method="POST">
+                    {% csrf_token%}
+                    Color1:<input type="text" name="color1" required><br>
+                    Color2:<input type="text" name="color2" required><br>
+                    Text:<input type="text" name="text" required><br>
+                    Upload Image:<input type="__" name="image" required><br>
+                    Description:<input type="text" name="description" required><br>
+                    <input type="hidden" value="{{request.session.date_added}}" name="date_added" required><br>
+                    <input type="hidden" value="{{request.session.poster}}" name="poster" required><br>
+                    <a href="/dashboard"><button>Cancel</button></a> <input type="submit" value="Submit"> 
+                </form> --
+            </div>        
+        </div>        
+    </div>
+</body>
+</html>
