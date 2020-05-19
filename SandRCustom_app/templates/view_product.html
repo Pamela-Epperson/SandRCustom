@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SandRCustom</title>
+</head>
+<body>
+    <a href="/rend_index">Sign In to Customize</a><a href="/view_cart">Cart</a> <a href="/home">Go Back</a>
+    <h1>{{a_product.name}}</h1> {{a_product.cost}}
+        {{a_product.description}}<br>
+    
+    <form action="/customize/{{a_product.id}}" method="POST">
+        {% csrf_token %}
+        Color1:<input type="text" name="color1" required><br>
+        Color2:<input type="text" name="color2"><br>
+        Text:<input type="text" name='text'><br>
+        Logo:<input type="image" name="logo">
+        <input type="submit" value="Add to Cart">
+    </form>
+    
+</body>
+</html>

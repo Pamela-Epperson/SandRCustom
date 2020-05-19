@@ -6,35 +6,75 @@
     <title>SandRCustom</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <div id="wrapper">
-        <h1>Welcome to SandRCustom!</h1>
-        <div id="top">
-            <a href="/sign_in">Sign In</a><a id=cart href="/view_cart">View Cart</a><a id=share href="/share_button">Share</a>
-        </div>   
-        <div id="form_box"> 
-            {% if messages %}
-                <div id='errors'>
-                {% for message in messages %}
-                    <p>- {{message}} -</p>
-                {% endfor %}
+        <div>
+            <img id="header" src="{%static 'images\logos\sandrlogo1.jpg'%}" alt="Script SandR Custom logo with pink/green paint palette">
+            <!-- <h1>Welcome to SandR Custom Designs!</h1> -->
+            <h1>{{request.session.cart}}</h1>
+        </div>
+        <div id="signCart">
+            <a href="/rend_index">Sign In</a> <a id=cart href="/view_cart">View Cart</a> <a id=share href="/share_button">Share</a>
+        </div>
+        <div class="nav">
+            <ul>
+               <li>Home</li>
+               <li>Custom Products</li>
+               <li>Portfolio</li>
+               <li>Design Help</li>
+               <li>Contact</li>
+               </ul>
+        </div>
+        <div id="banner">
+            <h5>Products</h5>
+        </div>
+        <div id="maincontent">
+            <div class="products">
+                <a href="/view_product/1"><img class="product_images" src="{%static 'images\canopies\canopy_logo.jpeg'%}" alt="custom red pet shirt with crown and queen logo"></a>
+                <h4>Canopy</h4>
+                <p>Prepare to represent!!Don't get lost in the party crowd.</p>
+            </div>
+            <div class="products">
+                <a href="/view_product/4"><img class="product_images" src="{%static 'images\beachtent\beachtentpinkgreen.jpg'%}" alt="pink and green beach tent"></a>
+                <h4>Beach Parasol Shade</h4>
+                <p>For parties on the sand!</p>
+            </div>
+            <div class="products">
+                <img class="product_images" src="{%static 'images\grillcovers\grillcover.jpg'%}" alt="black grill cover with white logo">
+                <h4>Grill Cover</h4>
+                <p>Party today, tomorrow and every day!</p>
+            </div>
+            <div class="products">
+                <a href="/view_product/2"><img class="product_images" src="{%static 'images\campchair\campchairbrtgreen.jpg'%}" alt="bright green camp/fishing chair with attached full shade"></a>
+                <h4>Camp Chair</h4>
+                <p>Every outdoor activity is your party!</p>
+            </div>
+            <div class="products">
+                <a href="/view_product/3"><img class="product_images" src="{%static 'images\wellness\yogacustomblackwithpinkflower.jpg'%}" alt="custom black yoga mat with pink flower"></a>
+                <h4>Wellness</h4>
+                <p>Party with purpose wellness!</p>
+            </div>
+            <div class="products">
+                <img class="product_images" src="{%static 'images\petstuff\fidofashion.jpg'%}" alt="custom red pet shirt with crown and queen logo">
+                <h4>Furbaby Product</h4>
+                <p>Pet parties are the best parties!</p>
+            </div>  
+            <div id="=mainfooter">
+                <ul>
+                    <li>About Us</li>
+                    <li>Contact</li>
+                    <li>Copyright &#x00A9 2020 SandR Custom Inc.</li>
+                    <li>Follow Us:</li>
+                    <!-- <img> images for fb twitter pinterest-->
+                </ul>
+                <div id="topfooter">
+                <a href="/home"><button>Back to top</button></a>
                 </div>
-            {% endif %}
-            <!-- <div id="custom_canopy">
-                <form action="/make_canopy" method="POST">
-                    {% csrf_token%}
-                    Color1:<input type="text" name="color1" required><br>
-                    Color2:<input type="text" name="color2" required><br>
-                    Text:<input type="text" name="text" required><br>
-                    Upload Image:<input type="__" name="image" required><br>
-                    Description:<input type="text" name="description" required><br>
-                    <input type="hidden" value="{{request.session.date_added}}" name="date_added" required><br>
-                    <input type="hidden" value="{{request.session.poster}}" name="poster" required><br>
-                    <a href="/dashboard"><button>Cancel</button></a> <input type="submit" value="Submit"> 
-                </form> --
-            </div>        
-        </div>        
-    </div>
+            </div>
+        </div>
+   </div>
 </body>
 </html>

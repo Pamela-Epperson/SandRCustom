@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#wrapper {
+    background-color: lightslategrey;
+    /*font-family: Arial, Helvetica, sans-serif; */
+    height: 1100px;
+    width: 1200px;
+    margin: 0px auto; 
+}
+#header{
+    width: 100px;
+    margin-left: 50px;
+    display: inline-block;
+    margin: 10px;
+    color: white;
+    vertical-align: top; 
+    outline-style: white solid 2px;
+    }
+#signCart{
+    display: inline;
+    text-align: right;    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    margin: 10px;
+    margin-left:500px;
+    outline-style: white solid 2px;
+}
+.nav {
+    height: 30px;
+    background-color: rgb(97, 121, 102);
+    margin: 0px 3px;
+    padding-top: 10px;
+    text-align: left;
+    vertical-align: baseline;     
+}
+ul {
+    color: darkgrey;
+    
+}
+li { 
+    display: inline;
+    font-size: medium;
+    color: darkgray;
+    font-weight: bold;
+    margin-left: 5px;
+    margin: 10px;
+} 
+
+  
+#banner{
+    margin: 5px;
+}
+#maincontent{
+    display: block;
+    padding: 10px;
+    width: 970px;
+    height: 950px;
+    }
+.products {
+    display: inline-block;
+    height: 290px;
+    width: 200px; 
+    vertical-align: top;
+    margin-right:30px;
+    margin-bottom: 5px;
+    color: white;
+}
+.product_images{
+    display: block;
+    width: 100px;
+    outline: darkolivegreen solid 4px;
+}
+h4 {
+    color: darkolivegreen;
+    text-align: left;
+    font-weight: bold;
+}
+#mainfooter{
+    height: 200px;
+    width: 100px;
+    text-align: justify;
+}
+#topfooter {
+    color: darkgray;
+    text-align: right;
+    font-size: small;
+    margin-right: 20px;
+}

@@ -10,8 +10,18 @@
 <body>
     <h2>Hello {{request.session.user}}! Review previous orders!</h2>
     <div id="top">
-        <a href="/dashboard">Dashboard</a> <a id=logout href="/logout">Logout</a>
+        <a id=logout href="/logout">Logout</a>
     </div>   
-    
+    <div id= orders>
+        <h3>Welcome {{request.session.user}}!</h3>
+            <!--display Date:order in single box  -->
+            <div id=single_order>
+            {% for order in all_orders %}
+                <p>{{order.created_at}}: "{{order.content}}"</p>
+                
+                {% endfor%}
+            </div> 
+        </div>
+    </div>
 </body>
 </html>

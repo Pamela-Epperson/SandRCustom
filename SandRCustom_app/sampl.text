@@ -1,0 +1,27 @@
+<script type="text/javascript">
+    
+        $(document).ready(function(){
+        $('img').hide();
+        $("#acr").click(function(){
+            $('p').first().addClass("red");
+        })
+        $('#slidetoggle').click(function(){
+            $('img').show();
+        });
+        $('#append').click(function(){
+            $('.end').append("<b>I go at the end!</b>");
+        });
+        $('#up').click(function(){
+            $('.up').slideUp()
+        });
+        $('#down').click(function(){
+            $('.down').slideDown(500)
+        });
+        $('#fdi').click(function(){
+            (this).fadeIn()
+        })
+        $('#hover').hover(function(){
+            $(this).css('background-color', 'blue');
+        })         
+    });
+    </script>

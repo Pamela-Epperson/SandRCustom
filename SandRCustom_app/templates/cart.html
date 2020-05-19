@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SandRCustom</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <h1>{{cart}}</h1>
+    <!-- {% for product in cart %}
+            <p>{{product.name}} {{product.description}} {{product.cost}}</p>
+    {% endfor %} -->
+    <a href="/checkout"></a>
+</body>
+</html>
