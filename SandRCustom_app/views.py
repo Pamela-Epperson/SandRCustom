@@ -80,10 +80,9 @@ def customize(request,id):
     else:
         user_product.logo = request.POST['logo']
     user_product.save()
-    
-    request.session['cart'].append(user_product)
-    request.session['cart']=json.dumps(request.session['cart'])
-    request.session.modified = True
+    request.session['cart'].append(user_product.id)
+    print(request.session['cart'])
+    request.session.modified=True
     return redirect('/view_cart')
 
 
@@ -104,9 +103,13 @@ def logout(request):
 
 # this will display the cart page showing all products currently queued for final checkout
 def view_cart(request):
+    items=[]
+    for id in request.session['cart']:
+        items.append(Product.objects.get(id=id))
     context = {
-        "cart": request.session['cart']
+        'user_product': items 
     }
+    print(request.session['cart'])
     return render(request, "cart.html", context)
 
 

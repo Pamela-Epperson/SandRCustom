@@ -9,10 +9,10 @@
 </head>
 <body>
     <h1>Shopping Cart</h1>
-    <h1>{{cart}}</h1>
-    <!-- {% for product in cart %}
-            <p>{{product.name}} {{product.description}} {{product.cost}}</p>
-    {% endfor %} -->
-    <a href="/checkout"></a>
+    <h1>{{request.session.cart}}</h1>
+    {% for item in user_product %}
+        {{item.name}} {{item.description}} {{item.cost}}
+    {% endfor %}
+    <a href="/checkout">Checkout</a>
 </body>
 </html>
